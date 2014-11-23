@@ -7,8 +7,8 @@ Remove the project from eclipse but keep it on your hard drive<br>
 Then go to the project folder (standart is User/git/alchemisticArts) and run:
 
 ```
-  gradlew setupDevWorkspace
-  gradlew eclipse
+  (./)gradlew(.bat) setupDevWorkspace
+  (./)gradlew(.bat) eclipse
 ```
 
 Back in eclipse import -> General -> existing project in Workspace -> Choose the project Folder -> import<br>
