@@ -91,13 +91,17 @@ public class AlchemisticArts
     	blockOreSilber= new BlockBasic(Material.rock, "blockOreSilber");
     	GameRegistry.registerBlock(blockOreSilber, "blockOreSilber");
     	
+    	blockSilber = new BlockBasic(Material.rock, "blockSilber");
+    	GameRegistry.registerBlock(blockSilber, "blockSilber");
+    	blockOreSilber= new BlockBasic(Material.rock, "blockOreSilber");
+    	GameRegistry.registerBlock(blockOreSilber, "blockOreSilber");
+    	
     	
     	
     	//CRAFTING:
-    	ItemStack stoneStack = new ItemStack(Blocks.stone);
-    	ItemStack enderpearlStack = new ItemStack(Items.ender_pearl);
     	GameRegistry.addRecipe(new ItemStack(Blocks.end_stone), "xxx","xyx" , "xxx", 
-    	        'x', stoneStack, 'y', enderpearlStack);
+    	        'x', new ItemStack(Blocks.stone),
+    	        'y', new ItemStack(Items.ender_pearl));
     	
     }    
     
