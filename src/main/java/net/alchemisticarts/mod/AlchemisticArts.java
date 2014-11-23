@@ -62,6 +62,9 @@ public class AlchemisticArts
     	blockHardStone = new BlockBasic(Material.rock, "blockHardStone");
     	GameRegistry.registerBlock(blockHardStone, "blockHardStone");
     	
+    	
+    	
+    	//CRAFTING:
     	ItemStack stoneStack = new ItemStack(Blocks.stone);
     	ItemStack enderpearlStack = new ItemStack(Items.ender_pearl);
 
