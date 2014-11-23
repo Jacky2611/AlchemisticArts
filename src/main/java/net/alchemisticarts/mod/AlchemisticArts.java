@@ -65,7 +65,7 @@ public class AlchemisticArts
     	ItemStack stoneStack = new ItemStack(Blocks.stone);
     	ItemStack enderpearlStack = new ItemStack(Items.ender_pearl);
 
-    	GameRegistry.addRecipe(new ItemStack(Blocks.cobblestone), "xxx","xyx" , "xxx", 
+    	GameRegistry.addRecipe(new ItemStack(Blocks.end_stone), "xxx","xyx" , "xxx", 
     	        'x', stoneStack, 'y', enderpearlStack);
     	
     }    
