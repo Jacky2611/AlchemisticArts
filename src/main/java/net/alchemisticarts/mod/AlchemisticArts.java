@@ -98,6 +98,9 @@ public class AlchemisticArts
     	        'x', new ItemStack(Blocks.stone),
     	        'y', new ItemStack(Items.ender_pearl));
     	
+    	//SMELTING:
+    	
+    	
     }    
     
     @EventHandler
