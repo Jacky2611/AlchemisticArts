@@ -23,7 +23,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class AlchemisticArts
 {
     public static final String MODID = "alchemisticarts";
-    public static final String VERSION = "alpha 0.0.1";
+    public static final String VERSION = "0.0.1";
     @Instance(MODID)
 	public static AlchemisticArts instance;
     
@@ -67,7 +67,6 @@ public class AlchemisticArts
     	//CRAFTING:
     	ItemStack stoneStack = new ItemStack(Blocks.stone);
     	ItemStack enderpearlStack = new ItemStack(Items.ender_pearl);
-
     	GameRegistry.addRecipe(new ItemStack(Blocks.end_stone), "xxx","xyx" , "xxx", 
     	        'x', stoneStack, 'y', enderpearlStack);
     	
