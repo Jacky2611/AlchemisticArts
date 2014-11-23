@@ -1,11 +1,11 @@
-package src.main.java.net.alchemisticarts.mod;
+package net.alchemisticarts.mod;
 
 import net.minecraft.init.Blocks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
 
-@Mod(modid = ExampleMod.MODID, version = ExampleMod.VERSION)
+@Mod(modid = AlchemisticArts.MODID, version = AlchemisticArts.VERSION)
 public class AlchemisticArts
 {
     public static final String MODID = "examplemod";

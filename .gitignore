@@ -1,7 +1,1 @@
-*
-
-!/src
-!/build.gradle
-!/eula.txt
-!/.gitignore
-!/.project
+*!/src!/build.gradle!/eula.txt!/.gitignore!/gradlew!/gradlew.bat!/gradle
