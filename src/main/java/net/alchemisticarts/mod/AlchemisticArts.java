@@ -55,8 +55,10 @@ public class AlchemisticArts
 		public static Block blockHardStone;
 		
 		public static Block blockOreWolfram;
-		
 		public static Block blockWolfram;
+		
+		public static Block blockSilber;
+		public static Block blockOreSilber;
 	
 	
 	
@@ -81,17 +83,20 @@ public class AlchemisticArts
     	
     	blockWolfram = new BlockBasic(Material.rock, "blockWolfram");
     	GameRegistry.registerBlock(blockWolfram, "blockWolfram");
-    	
     	blockOreWolfram = new BlockBasic(Material.rock, "blockOreWolfram");
     	GameRegistry.registerBlock(blockOreWolfram, "blockOreWolfram");
+    	
+    	blockSilber = new BlockBasic(Material.rock, "blockSilber");
+    	GameRegistry.registerBlock(blockSilber, "blockSilber");
+    	blockOreSilber= new BlockBasic(Material.rock, "blockOreSilber");
+    	GameRegistry.registerBlock(blockOreSilber, "blockOreSilber");
     	
     	
     	
     	//CRAFTING:
-    	ItemStack stoneStack = new ItemStack(Blocks.stone);
-    	ItemStack enderpearlStack = new ItemStack(Items.ender_pearl);
     	GameRegistry.addRecipe(new ItemStack(Blocks.end_stone), "xxx","xyx" , "xxx", 
-    	        'x', stoneStack, 'y', enderpearlStack);
+    	        'x', new ItemStack(Blocks.stone),
+    	        'y', new ItemStack(Items.ender_pearl));
     	
     }    
     
