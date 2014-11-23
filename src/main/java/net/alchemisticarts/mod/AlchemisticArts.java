@@ -47,10 +47,16 @@ public class AlchemisticArts
 		
 		public static Item itemIngotWolfram;
 		
+		public static Item itemIngotSilber;
+		
 	
 	
 	//BLOCKS:
 		public static Block blockHardStone;
+		
+		public static Block blockOreWolfram;
+		
+		public static Block blockWolfram;
 	
 	
 	
@@ -65,9 +71,19 @@ public class AlchemisticArts
     	GameRegistry.registerItem(itemIngotWolfram, "itemIngotWolfram");
     	
     	
+    	itemIngotSilber = new ItemBasic(64, "itemIngotSilber");
+    	GameRegistry.registerItem(itemIngotSilber, "itemIngotSilber");
+    	
+    	
     	//BLOCKS:
     	blockHardStone = new BlockBasic(Material.rock, "blockHardStone");
     	GameRegistry.registerBlock(blockHardStone, "blockHardStone");
+    	
+    	blockWolfram = new BlockBasic(Material.rock, "blockWolfram");
+    	GameRegistry.registerBlock(blockWolfram, "blockWolfram");
+    	
+    	blockOreWolfram = new BlockBasic(Material.rock, "blockOreWolfram");
+    	GameRegistry.registerBlock(blockOreWolfram, "blockOreWolfram");
     	
     	
     	
