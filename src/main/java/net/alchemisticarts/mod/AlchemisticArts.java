@@ -44,6 +44,9 @@ public class AlchemisticArts
 	
 	//ITEMS:
 		public static Item itemShinyCrystal;
+		
+		public static Item itemIngotWolfram;
+		
 	
 	
 	//BLOCKS:
@@ -57,6 +60,10 @@ public class AlchemisticArts
     	//ITEMS:
     	itemShinyCrystal = new ItemBasic(64, "itemShinyCrystal");
     	GameRegistry.registerItem(itemShinyCrystal, "itemShinyCrystal");
+    	
+    	itemIngotWolfram = new ItemBasic(64, "itemIngotWolfram");
+    	GameRegistry.registerItem(itemIngotWolfram, "itemIngotWolfram");
+    	
     	
     	//BLOCKS:
     	blockHardStone = new BlockBasic(Material.rock, "blockHardStone");
