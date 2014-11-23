@@ -23,7 +23,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class AlchemisticArts
 {
     public static final String MODID = "alchemisticarts";
-    public static final String VERSION = "0.0.1";
+    public static final String VERSION = "0.0.2";
     @Instance(MODID)
 	public static AlchemisticArts instance;
     
@@ -49,6 +49,14 @@ public class AlchemisticArts
 		
 		public static Item itemIngotSilber;
 		
+		public static Item itemIngotCopper;
+		
+		public static Item itemIngotTin;
+		
+		public static Item itemIngotNickel;
+		
+		public static Item itemIngotCobalt;
+		
 	
 	
 	//BLOCKS:
@@ -59,8 +67,19 @@ public class AlchemisticArts
 		
 		public static Block blockSilber;
 		public static Block blockOreSilber;
+		
+		public static Block blockCopper;
+		public static Block blockOreCopper;
 	
-	
+		public static Block blockTin;
+		public static Block blockOreTin;
+
+		public static Block blockNickel;
+		public static Block blockOreNickel;
+		
+		public static Block blockCobalt;
+		public static Block blockOreCobalt;
+		
 	
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
@@ -75,6 +94,18 @@ public class AlchemisticArts
     	
     	itemIngotSilber = new ItemBasic(64, "itemIngotSilber");
     	GameRegistry.registerItem(itemIngotSilber, "itemIngotSilber");
+    	
+    	itemIngotCopper = new ItemBasic(64, "itemIngotCopper");
+    	GameRegistry.registerItem(itemIngotCopper, "itemIngotCopper");
+    	
+    	itemIngotTin = new ItemBasic(64, "itemIngotTin");
+    	GameRegistry.registerItem(itemIngotTin, "itemIngotTin");
+    	
+    	itemIngotNickel = new ItemBasic(64, "itemIngotNickel");
+    	GameRegistry.registerItem(itemIngotNickel, "itemIngotNickel");
+    	
+    	itemIngotCobalt = new ItemBasic(64, "itemIngotCobalt");
+    	GameRegistry.registerItem(itemIngotCobalt, "itemIngotCobalt");
     	
     	
     	//BLOCKS:
@@ -91,12 +122,34 @@ public class AlchemisticArts
     	blockOreSilber= new BlockBasic(Material.rock, "blockOreSilber");
     	GameRegistry.registerBlock(blockOreSilber, "blockOreSilber");
     	
+    	blockCopper = new BlockBasic(Material.rock, "blockCopper");
+    	GameRegistry.registerBlock(blockCopper , "blockCopper");
+    	blockOreCopper = new BlockBasic(Material.rock, "blockOreCopper");
+    	GameRegistry.registerBlock(blockOreCopper, "blockOreCopper");
+    	
+    	blockTin = new BlockBasic(Material.rock, "blockTin");
+    	GameRegistry.registerBlock(blockTin , "blockTin");
+    	blockOreTin = new BlockBasic(Material.rock, "blockOreTin");
+    	GameRegistry.registerBlock(blockOreTin, "blockOreTin");
+    	
+    	blockNickel = new BlockBasic(Material.rock, "blockNickel");
+    	GameRegistry.registerBlock(blockNickel , "blockNickel");
+    	blockOreNickel = new BlockBasic(Material.rock, "blockOreNickel");
+    	GameRegistry.registerBlock(blockOreNickel, "blockOreNickel");
+    	
+    	blockCobalt = new BlockBasic(Material.rock, "blockCobalt");
+    	GameRegistry.registerBlock(blockCobalt , "blockCobalt");
+    	blockOreCobalt = new BlockBasic(Material.rock, "blockOreCobalt");
+    	GameRegistry.registerBlock(blockOreCobalt, "blockOreCobalt");
+    	
     	
     	
     	//CRAFTING:
     	GameRegistry.addRecipe(new ItemStack(Blocks.end_stone), "xxx","xyx" , "xxx", 
     	        'x', new ItemStack(Blocks.stone),
     	        'y', new ItemStack(Items.ender_pearl));
+    	
+    	//Smelting:
     	
     }    
     
