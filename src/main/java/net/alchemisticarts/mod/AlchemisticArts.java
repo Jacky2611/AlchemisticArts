@@ -15,6 +15,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -42,7 +43,7 @@ public class AlchemisticArts
 	
 	
 	//ITEMS:
-		public static Item itemShinyGrass;
+		public static Item itemShinyCrystal;
 	
 	
 	//BLOCKS:
@@ -54,11 +55,12 @@ public class AlchemisticArts
     public void preInit(FMLPreInitializationEvent event)
     {
     	//ITEMS:
-    	itemShinyGrass = new ItemBasic(64, "itemShinyGrass");
-    	
+    	itemShinyCrystal = new ItemBasic(64, "itemShinyCrystal");
+    	GameRegistry.registerItem(itemShinyCrystal, "itemShinyCrystal");
     	
     	//BLOCKS:
     	blockHardStone = new BlockBasic(Material.rock, "blockHardStone");
+    	GameRegistry.registerBlock(blockHardStone, "blockHardStone");
     }    
     
     @EventHandler
