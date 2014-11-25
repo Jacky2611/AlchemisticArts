@@ -162,6 +162,22 @@ public class AlchemisticArts
     	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreCobalt), new ItemStack(AlchemisticArts.blockCobalt), 0.5f);
     	
     	*/
+    	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreCobalt), new ItemStack(AlchemisticArts.itemIngotCobalt), 0.5f);
+    	
+    	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreWolfram), new ItemStack(AlchemisticArts.itemIngotWolfram), 0.5f);
+    	
+    	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreSilber), new ItemStack(AlchemisticArts.itemIngotSilber), 0.5f);
+    	
+    	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreCopper), new ItemStack(AlchemisticArts.itemIngotCopper), 0.5f);
+    	
+    	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreTin), new ItemStack(AlchemisticArts.itemIngotTin), 0.5f);
+    	
+    	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreNickel), new ItemStack(AlchemisticArts.itemIngotNickel), 0.5f);
+    	
+    	
+    	GameRegistry.addShapelessRecipe(new ItemStack(AlchemisticArts.blockCobalt), new ItemStack(AlchemisticArts.itemIngotCobalt, 9));
+    	
+    	
     	
     }    
     
