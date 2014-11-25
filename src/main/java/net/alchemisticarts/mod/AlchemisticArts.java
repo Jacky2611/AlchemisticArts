@@ -174,7 +174,7 @@ public class AlchemisticArts
     	
     	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreNickel), new ItemStack(AlchemisticArts.itemIngotNickel), 0.5f);
     	
-    	
+	
     	GameRegistry.addShapelessRecipe(new ItemStack(AlchemisticArts.itemIngotCobalt), new ItemStack(AlchemisticArts.blockCobalt));
     	
     }    
