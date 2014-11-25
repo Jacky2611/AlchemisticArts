@@ -145,11 +145,23 @@ public class AlchemisticArts
     	
     	
     	//CRAFTING:
+    	
+    	/*		EXAMPLE
+    	 * 
+    		//Shaped
     	GameRegistry.addRecipe(new ItemStack(Blocks.end_stone), "xxx","xyx" , "xxx", 
     	        'x', new ItemStack(Blocks.stone),
     	        'y', new ItemStack(Items.ender_pearl));
+    	        
+    	    //Not Shaped
+    	GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond, 64), new ItemStack(Blocks.dirt));
     	
-    	//Smelting:
+
+    	
+    		//Smelting:					Input												Output						XP Value
+    	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreCobalt), new ItemStack(AlchemisticArts.blockCobalt), 0.5f);
+    	
+    	*/
     	
     }    
     
