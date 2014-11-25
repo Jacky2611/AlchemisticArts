@@ -186,10 +186,35 @@ public class AlchemisticArts
     	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreNickel), new ItemStack(AlchemisticArts.itemIngotNickel), 0.5f);
     	
 	
-    	GameRegistry.addShapelessRecipe(new ItemStack(AlchemisticArts.itemIngotCobalt), new ItemStack(AlchemisticArts.blockCobalt));
+    	GameRegistry.addShapelessRecipe(new ItemStack(AlchemisticArts.itemIngotCobalt, 9), new ItemStack(AlchemisticArts.blockCobalt));
     	
+    	GameRegistry.addShapelessRecipe(new ItemStack(AlchemisticArts.itemIngotWolfram, 9), new ItemStack(AlchemisticArts.blockWolfram));
     	
+    	GameRegistry.addShapelessRecipe(new ItemStack(AlchemisticArts.itemIngotSilber, 9), new ItemStack(AlchemisticArts.blockSilber));
     	
+    	GameRegistry.addShapelessRecipe(new ItemStack(AlchemisticArts.itemIngotCopper, 9), new ItemStack(AlchemisticArts.blockCopper));
+    	
+    	GameRegistry.addShapelessRecipe(new ItemStack(AlchemisticArts.itemIngotTin, 9), new ItemStack(AlchemisticArts.blockTin));
+    	
+    	GameRegistry.addShapelessRecipe(new ItemStack(AlchemisticArts.itemIngotNickel, 9), new ItemStack(AlchemisticArts.blockNickel));
+    	
+    	GameRegistry.addRecipe(new ItemStack(AlchemisticArts.blockCobalt), "xxx", "xxx" , "xxx", 
+    	        'x', new ItemStack(AlchemisticArts.itemIngotCobalt));
+    	
+    	GameRegistry.addRecipe(new ItemStack(AlchemisticArts.blockWolfram), "xxx", "xxx" , "xxx", 
+    	        'x', new ItemStack(AlchemisticArts.itemIngotWolfram));
+    	
+    	GameRegistry.addRecipe(new ItemStack(AlchemisticArts.blockSilber), "xxx", "xxx" , "xxx", 
+    	        'x', new ItemStack(AlchemisticArts.itemIngotSilber));
+    	
+    	GameRegistry.addRecipe(new ItemStack(AlchemisticArts.blockCopper), "xxx", "xxx" , "xxx", 
+    	        'x', new ItemStack(AlchemisticArts.itemIngotCopper));
+    	
+    	GameRegistry.addRecipe(new ItemStack(AlchemisticArts.blockTin), "xxx", "xxx" , "xxx", 
+    	        'x', new ItemStack(AlchemisticArts.itemIngotTin));
+    	
+    	GameRegistry.addRecipe(new ItemStack(AlchemisticArts.blockNickel), "xxx", "xxx" , "xxx", 
+    	        'x', new ItemStack(AlchemisticArts.itemIngotNickel));
     	
     	//GUI
     	NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
