@@ -1,7 +1,10 @@
 package net.alchemisticarts.mod;
 
 import net.alchemisticarts.mod.blocks.BlockBasic;
+import net.alchemisticarts.mod.blocks.BlockCraftingFurnace;
+import net.alchemisticarts.mod.client.gui.GuiHandler;
 import net.alchemisticarts.mod.items.ItemBasic;
+import net.alchemisticarts.mod.tileentity.TileEntityCraftingFurnace;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -15,6 +18,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -60,7 +64,7 @@ public class AlchemisticArts
 	
 	
 	//BLOCKS:
-		public static Block blockHardStone;
+		public static Block blockCraftingFurnace;
 		
 		public static Block blockOreWolfram;
 		public static Block blockWolfram;
@@ -79,6 +83,10 @@ public class AlchemisticArts
 		
 		public static Block blockCobalt;
 		public static Block blockOreCobalt;
+		
+		
+	//Gui
+		public static final int guiCraftingFurnaceId = 0;
 		
 	
     @EventHandler
@@ -109,8 +117,11 @@ public class AlchemisticArts
     	
     	
     	//BLOCKS:
-    	blockHardStone = new BlockBasic(Material.rock, "blockHardStone");
-    	GameRegistry.registerBlock(blockHardStone, "blockHardStone");
+    	blockCraftingFurnace = new BlockCraftingFurnace(Material.rock, "blockCraftingFurnace");
+    	GameRegistry.registerTileEntity(TileEntityCraftingFurnace.class, "craftingFurnace");
+    	GameRegistry.registerBlock(blockCraftingFurnace, "blockCraftingFurnace");
+    	
+    	
     	
     	blockWolfram = new BlockBasic(Material.rock, "blockWolfram");
     	GameRegistry.registerBlock(blockWolfram, "blockWolfram");
@@ -176,6 +187,12 @@ public class AlchemisticArts
     	
 	
     	GameRegistry.addShapelessRecipe(new ItemStack(AlchemisticArts.itemIngotCobalt), new ItemStack(AlchemisticArts.blockCobalt));
+    	
+    	
+    	
+    	
+    	//GUI
+    	NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
     	
     }    
     
