@@ -127,39 +127,47 @@ public boolean canInteractWith(EntityPlayer entityplayer)
 	 }
 }
 
-public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2)
+public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int slotID)
 {
 	 ItemStack itemstack = null;
-	 Slot slot = (Slot)inventorySlots.get(par2);
+	 Slot slot = (Slot)inventorySlots.get(slotID);
 	 if(slot != null && slot.getHasStack())
 	 {
 		 ItemStack itemstack1 = slot.getStack();
 		 itemstack = itemstack1.copy();
-		 if(par2 == 0)
+		//Output
+		 if(slotID == 0)
 		 {
-			 if(!mergeItemStack(itemstack1, 10, 46, true))
+			 //full inventory
+			 if(!mergeItemStack(itemstack1, 27, 63, true))
 			 {
 				 return null;
 			 }
 		 } else
-		 if(par2 >= 10 && par2 < 37)
+		//main Inventory
+		 if(slotID >= 27 && slotID < 54)
 		 {
-			 if(!mergeItemStack(itemstack1, 37, 46, false))
+			 //hotbar
+			 if(!mergeItemStack(itemstack1, 54, 63, false))
 			 {
 				 return null;
 			 }
 		 } else
-		 if(par2 >= 37 && par2 < 46)
+		//hotbar
+		 if(slotID >= 54 && slotID < 63)
 		 {
-			 if(!mergeItemStack(itemstack1, 10, 37, false))
+			 //main Inventory
+			 if(!mergeItemStack(itemstack1, 27, 53, false))
 			 {
 				 return null;
 			 }
-		 } else
-		 if(!mergeItemStack(itemstack1, 10, 46, false))
+		//everything with main inventory
+		 } else if(!mergeItemStack(itemstack1, 27, 63, false))
 		 {
 			 return null;
 		 }
+		 
+		 
 		 if(itemstack1.stackSize == 0)
 		 {
 			 slot.putStack(null);
