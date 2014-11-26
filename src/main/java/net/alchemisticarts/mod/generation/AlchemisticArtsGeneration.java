@@ -1,7 +1,7 @@
 package net.alchemisticarts.mod.generation;
 
 import java.util.Random;
-
+import net.minecraft.src.WorldGenMinable;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.common.IWorldGenerator;
@@ -23,11 +23,18 @@ import cpw.mods.fml.common.IWorldGenerator;
 	        }
 		}
 
-		private void generateEnd(World world, Random random, int i, int j) {}
+		private void generateEnd(World world, Random rand, int chunkX, int chunkZ) {}
 
-		private void generateSurface(World world, Random random, int i, int j) {
-	        
+		private void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
+	        for(int k = 0; k < 10; k++){
+	        	int firstBlockXCoord = chunkX + rand.nextInt(16);
+	        	int firstBlockYCoord = rand.nextInt(64);
+	        	int firstBlockZCoord = chunkZ + rand.nextInt(16);
+	        	
+	        	(new WorldGenMinable(TutorialMain.myFirstBlock.blockID, 13)).generate(world, rand, firstBlockXCoord, firstBlockYCoord, firstBlockZCoord);
+	        }
 		}
 
-		private void generateNether(World world, Random random, int i, int j) {}
+		private void generateNether(World world, Random rand, int chunkX, int chunkZ) {}
 	}
+	
