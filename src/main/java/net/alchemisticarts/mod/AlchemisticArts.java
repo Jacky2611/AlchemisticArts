@@ -241,22 +241,7 @@ public class AlchemisticArts
     	        'x', new ItemStack(AlchemisticArts.itemIngotTin));
     	
     	GameRegistry.addRecipe(new ItemStack(AlchemisticArts.blockNickel), "xxx", "xxx" , "xxx", 
-    	        'x', new ItemStack(AlchemisticArts.itemIngotNickel));}
-    
-    public class RecipesWeapons
-    {
-    	 public RecipesWeapons()
-    	    {
-    	        recipeItems = (new Object[][] {
-    	            new Object[] {
-    	                Block.planks, Block.cobblestone, Item.ingotIron, Item.diamond, Item.ingotGold
-    	            }, new Object[] {
-    	                Item.swordWood, Item.swordStone, Item.swordSteel, Item.swordDiamond, Item.swordGold
-    	            }
-    	        });
-    	    
-    	
-    	
+    	        'x', new ItemStack(AlchemisticArts.itemIngotNickel));   		
     	
     	//GUI
     	NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
