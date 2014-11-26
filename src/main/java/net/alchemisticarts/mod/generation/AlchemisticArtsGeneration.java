@@ -1,9 +1,13 @@
 package net.alchemisticarts.mod.generation;
 
 import java.util.Random;
-import net.minecraft.src.WorldGenMinable;
+
+import net.alchemisticarts.mod.AlchemisticArts;
+import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 
 
@@ -26,15 +30,28 @@ import cpw.mods.fml.common.IWorldGenerator;
 		private void generateEnd(World world, Random rand, int chunkX, int chunkZ) {}
 
 		private void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
-	        for(int k = 0; k < 10; k++){
-	        	int firstBlockXCoord = chunkX + rand.nextInt(16);
-	        	int firstBlockYCoord = rand.nextInt(64);
-	        	int firstBlockZCoord = chunkZ + rand.nextInt(16);
-	        	
-	        	(new WorldGenMinable(TutorialMain.myFirstBlock.blockID, 13)).generate(world, rand, firstBlockXCoord, firstBlockYCoord, firstBlockZCoord);
-	        }
+			
+			generateOre(AlchemisticArts.blockOreCobalt, world, rand, chunkX, chunkZ, 30, 10, 0, 50, Blocks.stone);
+		
 		}
 
-		private void generateNether(World world, Random rand, int chunkX, int chunkZ) {}
+		private void generateNether(World world, Random rand, int chunkX, int chunkZ) {
+			
+		}
+		
+		
+		
+		public void generateOre(Block block, World world, Random random, int chunk_x, int chunk_z, int maxVeinSize, int chancesToSpawn, int minY, int maxY, Block generateIn) {
+
+			int heightRange = maxY - minY;
+
+			WorldGenMinable worldgenminable = new WorldGenMinable(block, 13, generateIn);
+			for (int k1 = 0; k1 < chancesToSpawn; ++k1) {
+				int xrand = random.nextInt(16);
+				int yrand = random.nextInt(heightRange) + minY;
+				int zrand = random.nextInt(16);
+				worldgenminable.generate(world, random, chunk_x + xrand, yrand, chunk_z + zrand);
+			}
+		}
 	}
 	
