@@ -159,19 +159,46 @@ public class AlchemisticArts
     	
     	/*		EXAMPLE
     	 * 
-    		//Shaped
-    	GameRegistry.addRecipe(new ItemStack(Blocks.end_stone), "xxx","xyx" , "xxx", 
-    	        'x', new ItemStack(Blocks.stone),
-    	        'y', new ItemStack(Items.ender_pearl));
-    	        
-    	    //Not Shaped
-    	GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond, 64), new ItemStack(Blocks.dirt));
-    	
+    	   public RecipesWeapons()
+    {
+        recipeItems = (new Object[][] {
+            new Object[] {
+                Block.planks, Block.cobblestone, Item.ingotIron, Item.diamond, Item.ingotGold
+            }, new Object[] {
+                Item.swordWood, Item.swordStone, Item.swordSteel, Item.swordDiamond, Item.swordGold
+            }
+        });
+    }
 
-    	
-    		//Smelting:					Input												Output						XP Value
-    	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreCobalt), new ItemStack(AlchemisticArts.blockCobalt), 0.5f);
-    	
+    public void addRecipes(CraftingManager craftingmanager)
+    {
+        for(int i = 0; i < recipeItems[0].length; i++)
+        {
+            Object obj = recipeItems[0][i];
+            for(int j = 0; j < recipeItems.length - 1; j++)
+            {
+                Item item = (Item)recipeItems[j + 1][i];
+                craftingmanager.addRecipe(new ItemStack(item), new Object[] {
+                    recipePatterns[j], Character.valueOf('#'), Item.stick, Character.valueOf('X'), obj
+                });
+            }
+
+        }
+
+        craftingmanager.addRecipe(new ItemStack(Item.bow, 1), new Object[] {
+            " #X", "# X", " #X", Character.valueOf('X'), Item.silk, Character.valueOf('#'), Item.stick
+        });
+        craftingmanager.addRecipe(new ItemStack(Item.arrow, 4), new Object[] {
+            "X", "#", "Y", Character.valueOf('Y'), Item.feather, Character.valueOf('X'), Item.flint, Character.valueOf('#'), Item.stick
+        });
+    	}
+
+    		private String recipePatterns[][] = {
+        {
+            "X", "X", "#"
+        }
+    	};
+    	private Object recipeItems[][];
     	*/
     	GameRegistry.addSmelting(new ItemStack(AlchemisticArts.blockOreCobalt), new ItemStack(AlchemisticArts.itemIngotCobalt), 0.5f);
     	
@@ -214,7 +241,22 @@ public class AlchemisticArts
     	        'x', new ItemStack(AlchemisticArts.itemIngotTin));
     	
     	GameRegistry.addRecipe(new ItemStack(AlchemisticArts.blockNickel), "xxx", "xxx" , "xxx", 
-    	        'x', new ItemStack(AlchemisticArts.itemIngotNickel));
+    	        'x', new ItemStack(AlchemisticArts.itemIngotNickel));}
+    
+    public class RecipesWeapons
+    {
+    	 public RecipesWeapons()
+    	    {
+    	        recipeItems = (new Object[][] {
+    	            new Object[] {
+    	                Block.planks, Block.cobblestone, Item.ingotIron, Item.diamond, Item.ingotGold
+    	            }, new Object[] {
+    	                Item.swordWood, Item.swordStone, Item.swordSteel, Item.swordDiamond, Item.swordGold
+    	            }
+    	        });
+    	    
+    	
+    	
     	
     	//GUI
     	NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
