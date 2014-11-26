@@ -16,7 +16,7 @@ public class GuiHandler implements IGuiHandler {
                 TileEntity tileEntity = world.getTileEntity(x, y, z);
                 
             	switch(id){
-            	case AlchemisticArts.guiCraftingFurnaceId: return new ContainerCraftingFurnace(player.inventory,(TileEntityCraftingFurnace)tileEntity, world, x, y, z);
+            	case AlchemisticArts.guiCraftingFurnaceId: return new ContainerCraftingFurnace(player.inventory, (TileEntityCraftingFurnace)tileEntity,world, x, y, z);
             	default: return null;
             	}
 
@@ -28,7 +28,7 @@ public class GuiHandler implements IGuiHandler {
             TileEntity tileEntity = world.getTileEntity(x, y, z);
         	
         	switch(id){
-        	case AlchemisticArts.guiCraftingFurnaceId: return new GuiCraftingFurnace(player.inventory, (TileEntityCraftingFurnace)tileEntity, world, x, y, z);
+        	case AlchemisticArts.guiCraftingFurnaceId: return new GuiCraftingFurnace(player.inventory, (TileEntityCraftingFurnace)tileEntity,world, x, y, z);
         	default: return null;
         	}
 

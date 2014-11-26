@@ -3,6 +3,7 @@ package net.alchemisticarts.mod;
 import net.alchemisticarts.mod.blocks.BlockBasic;
 import net.alchemisticarts.mod.blocks.BlockCraftingFurnace;
 import net.alchemisticarts.mod.client.gui.GuiHandler;
+import net.alchemisticarts.mod.crafting.craftingfurnace.CraftingFurnace;
 import net.alchemisticarts.mod.items.ItemBasic;
 import net.alchemisticarts.mod.tileentity.TileEntityCraftingFurnace;
 import net.minecraft.block.Block;
@@ -242,6 +243,9 @@ public class AlchemisticArts
     	
     	GameRegistry.addRecipe(new ItemStack(AlchemisticArts.blockNickel), "xxx", "xxx" , "xxx", 
     	        'x', new ItemStack(AlchemisticArts.itemIngotNickel));   		
+    	
+    	CraftingFurnace.addRecipe(new ItemStack(AlchemisticArts.blockNickel), "xxx ", "xxxx" , "xxx ", 
+    	        'x', new ItemStack(AlchemisticArts.itemIngotNickel));;
     	
     	//GUI
     	NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
